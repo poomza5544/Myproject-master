@@ -48,6 +48,7 @@ class select_sizeState extends State<select_size> {
       Widget item = Padding(
         padding: const EdgeInsets.only(left:10, right: 5),
         child: ChoiceChip(
+          avatar: Image.network(''),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
           ),

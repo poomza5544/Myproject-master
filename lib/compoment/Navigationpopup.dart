@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:untitled/compoment/selectcolor.dart';
 import 'package:untitled/compoment/selectsize.dart';
 import '../checkout.dart';
 import 'Button.dart';
@@ -115,6 +116,7 @@ class _NavigationpopupState extends State<Navigationpopup> {
                                   SizedBox(height: 5,),
                                   Text('สี:',style: TextStyle(fontSize: 15),),
                                   SizedBox(height: 5,),
+                                  select_color(),
                                 ],
                               ),
                             ],

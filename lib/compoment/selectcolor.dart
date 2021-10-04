@@ -4,11 +4,11 @@ import 'package:flutter/widgets.dart';
 
 
 
-class select_size extends StatefulWidget {
+class select_color extends StatefulWidget {
   @override
-  select_sizeState createState()
+  select_colorState createState()
   {
-    return select_sizeState();
+    return select_colorState();
   }
 }
 
@@ -18,14 +18,15 @@ class Tech
   Tech(this.label);
 }
 
-class select_sizeState extends State<select_size> {
+class select_colorState extends State<select_color> {
   int selectedIndex = 0;
   List<Tech> chipsList = [
-    Tech("16x30"),
-    Tech("20x20"),
-    Tech("40x20"),
-    Tech("150x40"),
-    Tech("250x120")
+    Tech('http://via.placeholder.com/350x150'),
+    Tech('http://via.placeholder.com/350x150'),
+    Tech('http://via.placeholder.com/350x150'),
+    Tech('http://via.placeholder.com/350x150'),
+    Tech('http://via.placeholder.com/350x150'),
+    Tech('http://via.placeholder.com/350x150'),
   ];
 
   @override
@@ -46,14 +47,12 @@ class select_sizeState extends State<select_size> {
     List<Widget> chips = [];
     for (int i=0; i< chipsList.length; i++) {
       Widget item = Padding(
-        padding: const EdgeInsets.only(left:10, right: 5),
+        padding: const EdgeInsets.all(8.0),
         child: ChoiceChip(
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10),
           ),
-          visualDensity: VisualDensity(horizontal: 0,vertical: -2),
-          label: Text(chipsList[i].label),
-          labelStyle: TextStyle(color: Colors.black),
+          label: Image.network(chipsList[i].label,width: 100,height: 100,),
           selectedColor: Colors.orangeAccent,
           backgroundColor: Colors.black12,
           selected: selectedIndex == i,
