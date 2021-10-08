@@ -4,6 +4,7 @@ import 'package:untitled/compoment/selectcolor.dart';
 import 'package:untitled/compoment/selectsize.dart';
 import '../checkout.dart';
 import 'Button.dart';
+import 'counter2.dart';
 
 class Navigationpopup extends StatefulWidget {
   const Navigationpopup({Key? key}) : super(key: key);
@@ -18,13 +19,7 @@ class _NavigationpopupState extends State<Navigationpopup> {
     return Container(
       width: 50,
       height: 105,
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(20),
-          topRight: Radius.circular(20),
-        ),
-      ),
+      color: Colors.white,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -143,6 +138,7 @@ class _NavigationpopupState extends State<Navigationpopup> {
                                 fontSize: 20,
                               ),
                             ),
+                            Counter_2(),
                           ],
                         ),
                         SizedBox(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:getwidget/components/checkbox/gf_checkbox.dart';
+import 'package:getwidget/size/gf_size.dart';
 import 'package:getwidget/types/gf_checkbox_type.dart';
 
 class checkbox extends StatefulWidget {
@@ -14,13 +15,12 @@ class _checkboxState extends State<checkbox> {
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
       children: [
+        SizedBox(height: 5,),
         GFCheckbox(
-          size: 22,
-          activeBgColor: Colors.deepOrange,
+          size: 20,
+          activeBgColor:  Colors.deepOrange,
           inactiveBorderColor: Colors.black12,
-          type: GFCheckboxType.circle,
           onChanged: (value) {
             setState(() {
               isChecked1 = value;
@@ -28,7 +28,6 @@ class _checkboxState extends State<checkbox> {
           },
           value: isChecked1,
           inactiveIcon: null,
-
         ),
       ],
     );
